@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Valorant-Landing-Page/static/css/main.f37b2e9a.chunk.css",
-    "main.js": "/Valorant-Landing-Page/static/js/main.e0268cd9.chunk.js",
-    "main.js.map": "/Valorant-Landing-Page/static/js/main.e0268cd9.chunk.js.map",
+    "main.js": "/Valorant-Landing-Page/static/js/main.667ebb38.chunk.js",
+    "main.js.map": "/Valorant-Landing-Page/static/js/main.667ebb38.chunk.js.map",
     "runtime-main.js": "/Valorant-Landing-Page/static/js/runtime-main.69d3c1ab.js",
     "runtime-main.js.map": "/Valorant-Landing-Page/static/js/runtime-main.69d3c1ab.js.map",
     "static/css/2.081f420c.chunk.css": "/Valorant-Landing-Page/static/css/2.081f420c.chunk.css",
@@ -26,6 +26,6 @@
     "static/css/2.081f420c.chunk.css",
     "static/js/2.df34e37e.chunk.js",
     "static/css/main.f37b2e9a.chunk.css",
-    "static/js/main.e0268cd9.chunk.js"
+    "static/js/main.667ebb38.chunk.js"
   ]
 }
