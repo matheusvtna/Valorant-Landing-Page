@@ -223,22 +223,22 @@ function App() {
 
     <div className='py-5' style={{backgroundColor: '#0E1921'}}>
       <Container>
-        <Row className='d-flex justify-content-around'>
-          <Col id='info' className='pr-5 justify-content-around'>
-            <Row className='align-items-center'>
+        <Row className='d-flex justify-content-around align-items-center'>
+          <Col id='info' className='pr-5 justify-content-around' xl={4} lg={4} md={6} sm={12} xs={12}>
+            <Row className='align-items-center' xs='justify-content-center' sm='justify-content-center' md='justify-content-center' lg='justify-content-start'>
               <FiMapPin color="#FC4854" size={15} className="mr-4"/>
               <p className='text-white pt-3'> Av. Abecê - Centro, Recife - PE, Brasil</p>
             </Row>
-            <Row className='align-items-center'>
+            <Row className='align-items-center' xs='justify-content-center' sm='justify-content-center' md='justify-content-center' lg='justify-content-start'>
               <FiPhone color="#FC4854" size={15} className="mr-4"/>
               <p className='text-white pt-3'> (81) 9xxxx-xxxx</p>
             </Row>
-            <Row className='align-items-center'>
+            <Row className='align-items-center' xs='justify-content-center' sm='justify-content-center' md='justify-content-center' lg='justify-content-start'>
               <FiMail color="#FC4854" size={15} className="mr-4"/>
               <p className='text-white pt-3'> matheusxxxx@xxxx.com</p>
             </Row>           
           </Col>
-          <Col id='social' className='justify-content-center'>
+          <Col id='social' className='justify-content-start' xl={4} lg={4} md={6} sm={12} xs={12}>
             <Row className='py-3 justify-content-center'>
               <a href='https://github.com/matheusvtna/' target="_blank"> 
                 <FiGithub color="#FC4854" size={25} className="mr-4"/>
@@ -256,9 +256,9 @@ function App() {
               </a>
             </Row>
           </Col>
-          <Col id='back' className='d-flex justify-content-end align-items-start'>
-            <Button onClick={() => window.scrollTo(0, 0)} className="down-button">
-              <FiChevronUp color="#ffffff" size={42} className="mx-4" />
+          <Col id='back' className='d-flex align-items-center' xs='justify-content-center' sm='justify-content-center' md='justify-content-end' lg='justify-content-end'>
+            <Button onClick={() => window.scrollTo(0, 0)} className="down-button ">
+              <FiChevronUp color="#ffffff" size={36} className="mx-4" />
             </Button>
           </Col>
         </Row>
