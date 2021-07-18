@@ -63,6 +63,12 @@
   padding: 0.5rem 0.5rem;
 }
 
+.image {
+  border-radius: 0.25rem;
+  border: 0;
+  padding: 0.5rem 0.5rem;
+}
+
 *{
   scroll-behavior: smooth;
 }

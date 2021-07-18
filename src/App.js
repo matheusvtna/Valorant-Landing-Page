@@ -4,8 +4,11 @@ import { useState, useEffect } from 'react';
 import { differenceInDays, differenceInHours, differenceInMinutes, differenceInSeconds } from 'date-fns'
 
 import background from './assets/backgroundLayer.png';
+import backgroundClean from './assets/backgroundSquares.png';
 import logo from './assets/logo.png';
 import title from './assets/titleFrame.png'
+import agents from './assets/newAgents.png'
+import skins from './assets/skins.jpg'
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -40,7 +43,10 @@ function App() {
     
     let users = JSON.parse(localStorage.getItem('users') || "[]")
 
-    console.log("CHAMEI COM: " + name + " " + email)
+    if(name === "" || email === "") {
+      alert("Você precisa inserir nome e email para se cadastrar!")
+      return
+    }
 
     if(users.find(user => user.email === email)){
       alert("Este email já foi cadastrado anteriormente.")
@@ -73,17 +79,19 @@ function App() {
             </h1>          
         </Row>
 
-        <div className="d-flex pt-5 pb-5 justify-content-center w-100">
-          <Button onClick={() => window.scrollTo(0, window.innerHeight + 50)} className="down-button">
-            <FiChevronDown color="#ffffff" size={42} className="mx-4" />
-          </Button>
+        <div className="d-flex pt-5 pb-4 justify-content-center w-100">
+          <a href='#register' >
+            <Button className="down-button">
+              <FiChevronDown color="#ffffff" size={42} className="mx-4" />
+            </Button>
+          </a>
         </div>
       </Container>
       
     </div>
-    <div className="page-register" style={{ backgroundColor: "#171B23"}}>
-      <Container className="register-container py-4" style={{color: '#171B23'}}>
-        <Row className='pb-5'>
+    <div id="register" className="page-register" style={{ backgroundImage: `url(${backgroundClean})`}}>
+      <Container className="register-container py-4" style={{color: '#0E1921'}}>
+        <Row className='pb-5 pt-5'>
           <h3 className="pt-5 w-100 title text-center">
             Estamos contando os dias para as novas skins!
           </h3>
@@ -166,15 +174,58 @@ function App() {
             </Button>          
           </Form>
         </Col>
-
-        <div className="d-flex pb-5 justify-content-center w-100">
-          <Button onClick={() => window.scrollTo(0, 0)} className="down-button">
-            <FiChevronUp color="#ffffff" size={42} className="mx-4" />
-          </Button>
-        </div>
-
+{/* 
       </Container>
+      <div className="page-header" style={{ backgroundImage: `url(${backgroundClean})`}}> */}
+        {/* <Container> */}
+        <Row className='pb-3'>
+            <h1 className="pt-5 w-100 title text-center">
+              O que vem por aí...
+            </h1>
+          </Row>
+
+          <Row className="page-row py-5">
+            <Col xs="12" md="6" className="pr-5">
+              <h1 className="text-white mb-3 font-weight-bold">Novas skins para agentes</h1>
+              <p className="lead text-white">Mais do que armas e munição, VALORANT inclui agentes com habilidades adaptativas, rápidas e letais, que criam oportunidades para você exibir sua mecânica de tiro. Cada Agente é único, assim como os momentos de destaque de cada partida! </p>
+            </Col>
+            <Col xs="12" md="6">
+              <img className="image-row pl-5 w-100 image" src={agents}/>
+            </Col>
+          </Row>
+
+          <Row className="page-row py-5">
+            <Col xs="12" md="6">
+              <img className="image-row pr-5 w-100 image" src={skins} />
+            </Col>
+            <Col xs="12" md="6" className="pl-5">
+              <h1 className="text-white mb-3 font-weight-bold">Novas skins de armas</h1>
+              <p className="lead text-white">Mostre suas habilidades e mostre que tem mira. As novas skins do Valorant sentirão prazer em serem usadas por mãos tão habilidosas. Escolha a sua melhor arma e destrua na partida! </p>
+            </Col>
+          </Row>
+
+          <div className="d-flex pb-5 justify-content-center w-100">
+            <Button onClick={() => window.scrollTo(0, 0)} className="down-button">
+              <FiChevronUp color="#ffffff" size={42} className="mx-4" />
+            </Button>
+          </div>
+        </Container>
+      {/* </div> */}
     </div>
+
+    <div className="valorant-logo" style={{backgroundColor: '#FC4854'}}>
+      <Row className='d-flex justify-content-center align-items-start py-5'>
+        <Col xl={6} lg={6} md={6} sm={12} xs={12} className='d-flex justify-content-end'> 
+          <img src={logo} className="logo align-center" />
+        </Col>
+        <Col xl={6} lg={6} md={6} sm={12} xs={12} className='d-flex justify-content-start'>
+          <h1 className='pt-2 title'>
+            Valorant
+          </h1>
+        </Col>
+      </Row>
+    </div>
+
   </div>
   );
 }
