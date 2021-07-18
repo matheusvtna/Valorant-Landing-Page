@@ -28,6 +28,47 @@
   color: #61dafb;
 }
 
+.play-button {
+  border-radius: 0.25rem;
+  border: 0;
+  padding: 0.5rem 0.5rem;
+  background-color: #FC4854!important;
+  border-color:#FC4854!important;
+  font-weight: bold;
+  color:white;
+}
+
+.down-button {
+  border-radius: 0.25rem;
+  border: 0;
+  padding: 0.5rem 0.5rem;
+  background-color: #FC4854!important;
+  border-color: #FC4854!important;
+  font-weight: bold;
+  color: white;
+}
+
+.register-input {
+  color: #7a8599;
+  background-color: #262B31;
+  border-radius: 0.25rem;
+  border: 0;
+  padding: 1.5rem 0.75rem;
+}
+
+
+
+@font-face {
+  font-family: 'Valorant';
+  src: local('Valorant Font'), url(./fonts/ValorantFont.ttf) format('truetype');
+}
+
+.title {
+  font-family: Valorant;
+  color: white;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
