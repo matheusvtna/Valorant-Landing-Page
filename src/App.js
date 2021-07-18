@@ -1,5 +1,6 @@
 import { Button, Col, Container, Row, Form } from 'react-bootstrap';
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { FiChevronDown, FiChevronUp, FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
+import { FiTwitter, FiInstagram, FiGithub, FiLinkedin } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
 import { differenceInDays, differenceInHours, differenceInMinutes, differenceInSeconds } from 'date-fns'
 
@@ -61,7 +62,7 @@ function App() {
 
   return (
   <div className="root-page">
-    <div className="page-header" style={{ backgroundImage: `url(${background})`}}>
+    <div className="page-header" style={{ backgroundImage: `url(${background})`, backgroundColor: '#0E1921'}}>
       <Container className="flex header-container items-center">
         <Row className="d-flex py-5 pb-4 justify-content-between w-100 align-center">
           <img src={logo} className="logo align-center mx-5" />
@@ -203,27 +204,69 @@ function App() {
               <p className="lead text-white">Mostre suas habilidades e mostre que tem mira. As novas skins do Valorant sentirão prazer em serem usadas por mãos tão habilidosas. Escolha a sua melhor arma e destrua na partida! </p>
             </Col>
           </Row>
-
-          <div className="d-flex pb-5 justify-content-center w-100">
-            <Button onClick={() => window.scrollTo(0, 0)} className="down-button">
-              <FiChevronUp color="#ffffff" size={42} className="mx-4" />
-            </Button>
-          </div>
         </Container>
       {/* </div> */}
     </div>
 
-    <div className="valorant-logo" style={{backgroundColor: '#FC4854'}}>
+    <div className="d-flex valorant-logo justify-content-center" style={{backgroundColor: '#FC4854'}}>
       <Row className='d-flex justify-content-center align-items-start py-5'>
-        <Col xl={6} lg={6} md={6} sm={12} xs={12} className='d-flex justify-content-end'> 
+        <Col className='d-flex justify-content-end'> 
           <img src={logo} className="logo align-center" />
         </Col>
-        <Col xl={6} lg={6} md={6} sm={12} xs={12} className='d-flex justify-content-start'>
+        <Col className='d-flex justify-content-start'>
           <h1 className='pt-2 title'>
             Valorant
           </h1>
         </Col>
       </Row>
+    </div>
+
+    <div className='py-5' style={{backgroundColor: '#0E1921'}}>
+      <Container>
+        <Row className='d-flex justify-content-around'>
+          <Col id='info' className='pr-5 justify-content-around'>
+            <Row className='align-items-center'>
+              <FiMapPin color="#FC4854" size={15} className="mr-4"/>
+              <p className='text-white pt-3'> Av. Abecê - Centro, Recife - PE, Brasil</p>
+            </Row>
+            <Row className='align-items-center'>
+              <FiPhone color="#FC4854" size={15} className="mr-4"/>
+              <p className='text-white pt-3'> (81) 9xxxx-xxxx</p>
+            </Row>
+            <Row className='align-items-center'>
+              <FiMail color="#FC4854" size={15} className="mr-4"/>
+              <p className='text-white pt-3'> matheusxxxx@xxxx.com</p>
+            </Row>           
+          </Col>
+          <Col id='social' className='justify-content-center'>
+            <Row className='py-3 justify-content-center'>
+              <a href='https://github.com/matheusvtna/' target="_blank"> 
+                <FiGithub color="#FC4854" size={25} className="mr-4"/>
+              </a>
+              <a href='https://www.linkedin.com/in/matheusvtnandrade/' target="_blank"> 
+                <FiLinkedin color="#FC4854" size={25}/>
+              </a>
+            </Row>
+            <Row className='py-3 justify-content-center'>
+              <a href='https://www.instagram.com/matheusvtna/' target="_blank"> 
+                <FiInstagram color="#FC4854" size={25} className="mr-4"/>
+              </a>
+              <a href='https://twitter.com/matheusvtna' target="_blank"> 
+                <FiTwitter color="#FC4854" size={25}/>
+              </a>
+            </Row>
+          </Col>
+          <Col id='back' className='d-flex justify-content-end align-items-start'>
+            <Button onClick={() => window.scrollTo(0, 0)} className="down-button">
+              <FiChevronUp color="#ffffff" size={42} className="mx-4" />
+            </Button>
+          </Col>
+        </Row>
+
+        <div>
+          <p className='pt-5' style={{color: 'white'}}> Esta aplicação foi desenvolvido por Matheus Andrade para o Desafio 1 do Programa Hiring Coders promovido pela VTEX em parceira com a Gama Academy.</p>
+        </div>
+      </Container>
     </div>
 
   </div>
