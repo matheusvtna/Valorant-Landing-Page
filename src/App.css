@@ -56,7 +56,16 @@
   padding: 1.5rem 0.75rem;
 }
 
+.date-box {
+  background-color: #FC4854!important;
+  border-radius: 0.25rem;
+  border: 0;
+  padding: 0.5rem 0.5rem;
+}
 
+*{
+  scroll-behavior: smooth;
+}
 
 @font-face {
   font-family: 'Valorant';
